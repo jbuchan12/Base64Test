@@ -2,6 +2,8 @@ using FluentAssertions;
 
 namespace Base64Test.Test;
 
+[TestFixture]
+[TestOf(typeof(Base64Integer))]
 public class Base64IntegerTests
 {
 

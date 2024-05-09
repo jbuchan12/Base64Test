@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("Base64Test.Test")]
+[assembly: InternalsVisibleTo("FluentAssertions.Primitives")]
 namespace Base64Test;
 
 /// <summary>
@@ -19,7 +20,7 @@ internal class Base64Integer
     /// <value>
     /// The integer representation of the Base64 string.
     /// </value>
-    internal int IntegerValue { get; set; }
+    public int IntegerValue { get; set; }
 
     /// <summary>
     /// Gets or sets the Base64 encoded string representation of the integer value.
@@ -30,7 +31,7 @@ internal class Base64Integer
     /// <remarks>
     /// This property is used to store the Base64 string equivalent of the integer value.
     /// </remarks>
-    internal string StringValue { get; set; }
+    public string StringValue { get; set; }
 
     /// <summary>
     /// Creates a new Base64Integer instance from an integer.
@@ -46,6 +47,18 @@ internal class Base64Integer
     /// <returns>A new Base64Integer instance representing the integer value of the given Base64 encoded string.</returns>
     internal static Base64Integer FromString(string base64String) => new(ToInteger(base64String), base64String);
 
+    /// <summary>
+    /// Gets the minimum possible value of a Base64Integer.
+    /// </summary>
+    /// <value>
+    /// The minimum possible value of a Base64Integer, which is equivalent to an integer value of 0.
+    /// </value>
+    /// <remarks>
+    /// This property is useful for initializing variables or setting default values.
+    /// </remarks>
+
+    internal static Base64Integer Min => new (0, Base64Chars[0].ToString());
+    
     private Base64Integer(int number, string base64String)
     {
         IntegerValue = number;
