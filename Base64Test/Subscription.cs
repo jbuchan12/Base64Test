@@ -12,6 +12,8 @@ namespace Base64Test;
 /// </remarks>
 internal class Subscription
 {
+    private string _rawString;
+    
     /// <summary>
     /// Gets or sets the Base64 encoded integer ID of the subscription.
     /// </summary>
@@ -50,6 +52,8 @@ internal class Subscription
 
     internal Subscription(string base64Subscription)
     {
+        _rawString = base64Subscription;
+        
         string[] dataColumns = base64Subscription.Split("|");
 
         if (dataColumns.Length != 2)
@@ -70,6 +74,8 @@ internal class Subscription
                 "The Number of ticks in the datetime component were out of range, this number needs to be positive and lower than the maximum ticks");
         }
     }
+
+    public override string ToString() => _rawString;
 }
 
 /// <summary>
