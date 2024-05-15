@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base64Test", "Base64Test\Base64Test.csproj", "{453980E0-8665-48DF-9A2E-08D94F6C09A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base64Test", "Base64Test\Base64Test.csproj", "{453980E0-8665-48DF-9A2E-08D94F6C09A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base64Test.Test", "Base64Test.Test\Base64Test.Test.csproj", "{384A17B2-BBCD-4FD1-BC8F-A304204A5ED6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base64Test.Test", "Base64Test.Test\Base64Test.Test.csproj", "{384A17B2-BBCD-4FD1-BC8F-A304204A5ED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navtor.ERP.API", "Navtor.Data\Navtor.ERP.API.csproj", "{4AE112A5-D57F-4198-B1ED-260303E6A284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navtor.ERP.DataBase", "Navtor.ERP.DataBase\Navtor.ERP.DataBase.csproj", "{8BBE4D01-F71D-41C0-8068-C17E9854E405}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{384A17B2-BBCD-4FD1-BC8F-A304204A5ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{384A17B2-BBCD-4FD1-BC8F-A304204A5ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{384A17B2-BBCD-4FD1-BC8F-A304204A5ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AE112A5-D57F-4198-B1ED-260303E6A284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AE112A5-D57F-4198-B1ED-260303E6A284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AE112A5-D57F-4198-B1ED-260303E6A284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AE112A5-D57F-4198-B1ED-260303E6A284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BBE4D01-F71D-41C0-8068-C17E9854E405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBE4D01-F71D-41C0-8068-C17E9854E405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBE4D01-F71D-41C0-8068-C17E9854E405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BBE4D01-F71D-41C0-8068-C17E9854E405}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
