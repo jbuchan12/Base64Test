@@ -12,7 +12,7 @@ namespace Base64Test;
 /// </remarks>
 internal class Subscription
 {
-    private string _rawString;
+    private readonly string _rawString;
     
     /// <summary>
     /// Gets or sets the Base64 encoded integer ID of the subscription.

@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
+using Navtor.ERP.API.Models;
 
 namespace Navtor.ERP.DataBase.Models;
-public class Product
+public class Product : IApiModel
 {
     [Key]
     public Guid Id { get; set; }
