@@ -55,18 +55,6 @@ namespace Navtor.ERP.DataBase.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Products_ProductGroups_ProductGroupId",
-                        column: x => x.ProductGroupId,
-                        principalTable: "ProductGroups",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Products_Vessels_VesselId",
-                        column: x => x.VesselId,
-                        principalTable: "Vessels",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
