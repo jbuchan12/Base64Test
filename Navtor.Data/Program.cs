@@ -8,14 +8,18 @@ internal class Program
 {
     private static readonly VesselApiService VesselApiService = new ();
     private static readonly VesselRepository VesselRepository = new ();
-    
+    private static readonly ProductRepository ProductRepository = new ();
+
     private static async Task Main(string[] args)
     {
         if(VesselRepository.Any())
             return;
         
         List<Vessel> vessels = await GetVesselDataFromApi();
+        List<Product> products = await VesselApiService.GetProducts();
+
         VesselRepository.Add(vessels);
+        ProductRepository.Add(products);
     }
 
     private static async Task<List<Vessel>> GetVesselDataFromApi()
@@ -34,4 +38,5 @@ internal class Program
 
         return vessels;
     }
+
 }

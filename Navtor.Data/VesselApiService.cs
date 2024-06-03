@@ -36,4 +36,10 @@ internal class VesselApiService : NavtorApiService
         string data = await HttpGetAsync("product-groups");
         return JsonToObjects<ProductGroup>(data);
     }
+
+    public async Task<List<Product>> GetProducts()
+    {
+        string data = await HttpGetAsync("products");
+        return JsonToObjects<Product>(data);
+    }
 }
